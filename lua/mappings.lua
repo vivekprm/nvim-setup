@@ -32,3 +32,17 @@ map("n", "<leader>dgt", "<cmd>lua require'dap-go'.debug_test()<CR>", { desc = "D
 map("n", "<leader>dgl", "<cmd>lua require'dap-go'.debug_last()<CR>", { desc = "Debug last go test" })
 map("n", "<leader>gsj", "<cmd>GoTagAdd json<CR>", { desc = "Add json struct tags" })
 map("n", "<leader>gsy", "<cmd>GoTagAdd yaml<CR>", { desc = "Add yaml struct tags" })
+
+-- telescope --
+map("n", "<leader>ff", "<cmd>lua require('telescope.builtin').find_files()<cr>", { desc = "Telescope find files" })
+map("n", "<leader>fg", "<cmd>lua require('telescope.builtin').live_grep()<cr>", { desc = "Telescope live grep" })
+map("n", "<leader>fb", "<cmd>lua require('telescope.builtin').buffers()<cr>", { desc = "Telescope buffers" })
+map("n", "<leader>fh", "<cmd>lua require('telescope.builtin').help_tags()<cr>", { desc = "Telescope help tags" })
+map("n", "<leader>fm", "<cmd>lua require('telescope.builtin').lsp_document_symbols({ symbols='function' })<cr>", { desc = "Telescope list functions" })
+map("n", "<leader>fr", "<cmd>lua require('telescope.builtin').lsp_references()<cr>", { desc = "Telescope go to references" })
+map("n", "<leader>fi", "<cmd>lua require('telescope.builtin').lsp_implementations()<cr>", { desc = "Telescope go to implementations" })
+map("n", "<leader>fd", "<cmd>lua require('telescope.builtin').lsp_definitions()<cr>", { desc = "Telescope list definitions" })
+map("n", "<leader>ft", "<cmd>lua require('telescope.builtin').lsp_type_definitions()<cr>", { desc = "Telescope go to type definition" })
+
+-- Neogit --
+map("n", "<leader>gs", "<cmd>lua require('neogit').open({ kind='split' })<CR>", { desc = "Neogit open"})
