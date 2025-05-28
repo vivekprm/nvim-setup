@@ -32,3 +32,6 @@ map("n", "<leader>dgt", "<cmd>lua require'dap-go'.debug_test()<CR>", { desc = "D
 map("n", "<leader>dgl", "<cmd>lua require'dap-go'.debug_last()<CR>", { desc = "Debug last go test" })
 map("n", "<leader>gsj", "<cmd>GoTagAdd json<CR>", { desc = "Add json struct tags" })
 map("n", "<leader>gsy", "<cmd>GoTagAdd yaml<CR>", { desc = "Add yaml struct tags" })
+
+-- Git --
+map("n", "<leader>gg", "<cmd>LazyGit<CR>", { desc = "setup mapping to call :LazyGit" })

@@ -22,7 +22,7 @@ return {
       local mason_path = vim.fn.stdpath "data" .. "/mason"
       local extension_path = mason_path .. "/packages/codelldb/extension/"
       local codelldb_path = extension_path .. "adapter/codelldb"
-      local liblldb_path = extension_path.. "lldb/lib/liblldb.so"
+      local liblldb_path = extension_path.. "lldb/lib/liblldb.dylib"
 	-- If you are on Linux, replace the line above with the line below:
 	-- local liblldb_path = extension_path .. "lldb/lib/liblldb.so"
       local cfg = require('rustaceanvim.config')
@@ -151,6 +151,27 @@ return {
       return require "configs.null-ls"
     end
   },
+
+  {
+    "kdheepak/lazygit.nvim",
+    lazy = true,
+    cmd = {
+        "LazyGit",
+        "LazyGitConfig",
+        "LazyGitCurrentFile",
+        "LazyGitFilter",
+        "LazyGitFilterCurrentFile",
+    },
+    -- optional for floating window border decoration
+    dependencies = {
+        "nvim-lua/plenary.nvim",
+    },
+    -- setting the keybinding for LazyGit with 'keys' is recommended in
+    -- order to load the plugin when the command is run for the first time
+    keys = {
+        { "<leader>lg", "<cmd>LazyGit<cr>", desc = "LazyGit" }
+    }
+  }
 
   -- test new blink
   -- { import = "nvchad.blink.lazyspec" },
